@@ -1,0 +1,56 @@
+// Constants for main ghost body 
+var HEAD_RADIUS = 70; 
+var BODY_WIDTH = HEAD_RADIUS * 2; 
+var BODY_HEIGHT = 120; 
+var NUM_FEET = 3; 
+var FOOT_RADIUS = (BODY_WIDTH) / (NUM_FEET * 2); 
+var BODY_COLOR = Color.red;
+
+// Constants for eyes 
+var PUPIL_RADIUS = 8; 
+var PUPIL_LEFT_OFFSET = 16; 
+var PUPIL_RIGHT_OFFSET = 40; 
+var EYE_RADIUS = 20; 
+var EYE_OFFSET = 28; 
+var EYE_COLOR = Color.white; 
+var PUPIL_COLOR = Color.blue;
+
+/* This program draws a ghost on the canvas. */ 
+function start(){ var width = getWidth(); var height = getHeight(); var midWidth = width/2; var midHeight = height/2; var circle = new Circle(HEAD_RADIUS); circle.setPosition(midWidth, midHeight); circle.setColor(Color.red); add(circle);
+
+var rect = new   Rectangle(BODY_WIDTH,BODY_HEIGHT);
+rect.setPosition(midWidth-70, midHeight);
+rect.setColor(Color.red);
+add(rect);
+
+var eye = new Circle(20);
+eye.setPosition(midWidth -28, midHeight);
+eye.setColor(Color.white);
+add(eye);
+ 
+ var eye = new Circle(20);
+eye.setPosition(midWidth +28, midHeight);
+eye.setColor(Color.white);
+add(eye);
+
+var pupil = new Circle(8);
+pupil.setPosition(midWidth - 16, midHeight);
+pupil.setColor(Color.blue);
+add(pupil);
+
+var pupil = new Circle(8);
+pupil.setPosition(midWidth + 40, midHeight);
+pupil.setColor(Color.blue);
+add(pupil);
+
+
+var foot = new Circle((BODY_WIDTH) / (NUM_FEET * 2));
+foot.setPosition(midWidth + 46, midHeight + 120); foot.setColor(Color.red); add(foot);
+
+var foot = new Circle((BODY_WIDTH) / (NUM_FEET * 2));
+foot.setPosition(midWidth , midHeight + 120);
+foot.setColor(Color.red);
+add(foot);
+var foot = new Circle((BODY_WIDTH) / (NUM_FEET * 2)); foot.setPosition(midWidth - 46, midHeight + 120); foot.setColor(Color.red); add(foot);
+
+}
