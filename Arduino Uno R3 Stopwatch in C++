@@ -3,7 +3,7 @@
 
 
 //stop watch that mesures time in seconds.
-//to stop the watch, end the circuit or move the potentiometer.
+//click the reset button to reset the watch.
 
 #include <LiquidCrystal.h>
 LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
